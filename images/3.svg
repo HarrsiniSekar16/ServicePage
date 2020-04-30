@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="86" viewBox="0 0 86 86">
+  <defs>
+    <pattern id="pattern" width="1" height="1" viewBox="76.06 10.583 34.593 34.593">
+      <image preserveAspectRatio="xMidYMid slice" width="172" height="86" xlink:href="3-image.jpg"/>
+    </pattern>
+  </defs>
+  <g id="_3" data-name="3" stroke="#27debf" stroke-width="4" fill="url(#pattern)">
+    <circle cx="43" cy="43" r="43" stroke="none"/>
+    <circle cx="43" cy="43" r="41" fill="none"/>
+  </g>
+</svg>

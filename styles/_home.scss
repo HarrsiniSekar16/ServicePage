@@ -1,0 +1,573 @@
+@import "mixins";        //to use mixins 
+@import "variables";       //to use variables
+
+/* styling of the logo */
+.LeftHeadercontent{
+  width: 40px;
+  font-size: 42px;
+  font-weight: bolder;
+  background-color: $brand-color;  //using variables at all similar places
+  margin-left: 5%;
+  padding-top: 1%;
+  font-family: $font-family1;
+}
+
+h4 > a {
+  color: #606060;
+  text-decoration: none;
+  padding: 5%;
+  width: 10%;
+  font-family: $font-family2;
+}
+
+.atag{
+text-decoration: none;
+color: black;
+padding-left: 2%;
+padding-right: 2%;
+}
+
+
+.cell-2{
+  margin-left: 17%;
+}
+
+
+/* Adding bg image to the main page */
+.BgImage{
+  background-image: url("../images/FirstPageBGWallpaper.jpg");
+  width: 100%;
+  height: 650px;
+  margin-top: 2%;
+}
+
+div p{
+  margin-top: 0%;
+}
+
+/* Adding  respective styling to the main page texts which is separated in each span or div */
+.MainText1 {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  font-family:'Century Gothic','Futura';
+  margin-top: 0px;
+  margin-left: 25%;
+}
+
+.MainText2 {
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: $font-family1;
+  width: 83%;
+  margin-left: 25%;
+}
+
+.MainText3 {
+  color: #404040;
+  font-size: 20px;
+  font-family: $font-family2 ;
+  font-weight: bold;
+  width: 83%;
+  margin-left: 25%;
+  margin-bottom: 10%;
+}
+
+.MainText4{
+  margin-left: 25%;
+}
+
+.mainimage{
+ margin: 15%; 
+}
+
+.button{
+  @include button-width-mixin(30%); //mixin function usage
+  border-radius: 20px;
+  color: black;
+  margin-right: 10%;
+}
+
+
+
+  /* Live Demo as an hyperlink styling */
+  .LiveDemo{
+    color: black;
+    font-weight: 649;
+    text-decoration: none;
+    font-family:$font-family3;
+    padding: 4%;
+    width: 10%; 
+  }
+
+  .aboutmeimage{
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin-left: 35%;
+}
+
+h4{
+  color: $brand-color;
+  font-family: $font-family1;
+}
+
+.whyhire{
+  font-family: $font-family2;
+}
+
+.para{
+  font-family: $font-family1;
+}
+
+.button3{
+  @include button-width-mixin(30%);
+  color: white;
+  border-radius: 5px;
+}
+
+.img1{
+  border-radius: 50%;
+  padding-bottom: 3%;
+  padding-right: 0;
+}
+
+.img3{
+  border-radius: 50%;
+  padding-left: 0;
+  padding-bottom: 3%;
+}
+
+.img2{
+  border-radius: 50%;
+  border: 3px solid $brand-color;
+}
+
+/* Styling applies to all h2 tags within a div */                // nested selectors
+  div {
+      h2{
+    color: rgb(16, 223, 205);
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0px;
+    margin-top: 10px;
+      }
+  }
+
+  /* Styling applies to all h1 tags within a div */ 
+  div {
+      h1{
+    color: black;
+    font-family: 'Century Gothic';
+  }
+}
+
+/* Styling for the futureFFirst class */
+.featureFirst{
+  margin: 0px;
+  width: 100%;
+  height: 600px;
+}
+
+/* Adding styling to the cards that holds the cocntainer */
+.card1 {
+  /* Add shadows to create the "card" effect */
+  @include card-mixin;
+  width: 30%;
+}
+
+.card2{
+  /* Add shadows to create the "card" effect */
+  @include card-mixin;
+  width: 41%;
+  margin-top: 8%;
+}
+
+/* Add some padding inside the card container */
+.container1 {
+  padding: 2px 16px;
+}
+
+.card1 h2{
+    color: black;
+    font-size: 35px;
+    
+}
+
+.card1 h3{
+    color: $brand-color;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 0px;
+}
+
+/* Applies to all buttonof this shape */
+.button2{
+  @include button-width-mixin(50%);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*general sibling selector*/
+p ~ span {
+  color: black;
+}
+
+    
+/* Add some padding inside the card container */
+.container2 {
+      padding: 2px 16px;
+}
+
+
+.FeatureTitle{
+      font-family: "Arial Black", Gadget, sans-serifs;
+      font-size: 40px;
+      font-weight: bolder;
+  }
+    
+.FeatureTitle2{
+  font-family: $font-family2;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+/* Applies to all p tags within the class card2 */
+.card2 {
+    p{
+  font-family: 'Courier New', Courier, monospace;     //use of nested class
+  font-size: 22px;
+  color:#272626ab;
+}
+}
+
+progress{
+  width: 530px;
+}
+
+.button4{
+  @include button-width-mixin(10%);    //mixin usage
+  color: white;
+  border-radius: 5px;
+}
+
+.button5{
+  @include button-width-mixin(15%);
+  color: white;
+  border-radius: 5px;
+}
+
+.symbol{
+  font-size: 80px;
+  font-weight: bolder;
+  color:$brand-color;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+.img__description {
+  display: none;
+  height: 280px;
+  width: 100%;
+}
+
+.image-title {
+  color: white;
+  top: 140px;
+  position: relative;
+  font-weight: bold;
+  font-family: $font-family2;
+  font-size: 20px;
+}
+
+.MyWorkEx-2:hover .img__description {
+  display: block;
+  background: $brand-color;
+  opacity: 0.7;
+  height: 330px;
+}
+
+.WorkEx{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Adding styling to the testimonials section */
+.testimonials{
+  font-size: 18px;
+  font-family: $font-family3;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.ceo{
+  font-family: $font-family3;
+  color:$font-color;
+  font-size: 30px;
+  font-weight: 200px;
+}
+
+.ceodesignation{
+  font-family: $font-family3;
+  font-size: 20px;
+}
+
+.testimonialDiv{
+  float: center;
+  text-align: center;
+}
+
+.dots{
+  color: dimgrey;
+  @include dot-mixin;
+}
+
+.dots1{
+  color: $brand-color;
+  @include dot-mixin;
+  margin-bottom: 3%;
+
+}
+
+.dots2{
+  color: dimgrey;
+  @include dot-mixin;
+}
+
+
+//Trendy News Feeds
+
+.polaroid{
+  margin-left: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+  }
+  
+  
+div.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 $gray-color, 0 6px 20px 0$gray-color;
+  }
+  
+div.container {
+    text-align: left;
+    padding: 10px 20px;
+  }
+  
+.trend{
+  width : 90%;
+  display: inline-flex;
+  height: 350px;
+  margin-left: 18.5%;
+  }
+
+.formFirstRow{
+  display:inline-flex;
+  width: 100%;
+}
+.formrow{
+  float: left;
+  padding-left: 2%;
+  width: 50%;
+}
+
+.button1{
+  color: $brand-color;
+  }
+
+.blog{
+    text-align: center;
+    color:$brand-color; 
+    }
+
+/* Using attribute selector styling which adds styling to the input type text */
+/* ATTRIBUTE SELECTOR */
+input[type=text] {
+  @include form-mixin;
+  margin-left: 18%;
+  height: 40px;
+  width: 70%;
+  
+}
+
+input[type=tel] {
+  @include form-mixin;
+  margin-left: 18%;
+  height: 40px;
+  width: 70%;
+  
+}
+
+/* Using attribute selector styling which adds styling to the input type email */
+input[type=email] {
+  @include form-mixin;
+  height: 40px;
+  width: 70%;
+}
+
+/* Using attribute selector styling which adds styling to the input type select */
+select{
+  width: 70%;
+  height: 42px;
+  @include form-mixin;
+  float: left;
+  padding: 12px;
+}
+
+/* Using attribute selector styling which adds styling to the input type textarea */
+textarea{
+  @include form-mixin;
+  width: 75%;
+  margin-left: 10.5%;
+  height: 200px;
+  
+}
+
+
+
+/* PSEUDO ELEMENTS */
+.formrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Adding styling to the footer side logo image and contents  */
+.LeftFootercontent{
+  width: 100px;
+  margin-left: 10px;;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.LeftFooter{
+  float: left;
+  width: 150px;
+  height: 60px;
+  background-color: $brand-color;
+  margin: 20px;
+
+}
+
+.LeftFooterWritings{
+  padding-top: 15%;
+  width: 250px;
+  font-size: 17px;
+  font-family: $font-family3;
+}
+
+.lastline1{
+  
+  font-family: $font-family3;
+  font-size: 20px;
+  float: right;
+  margin-right: 10%;
+}
+
+/* Adding styling to the contact us section */
+.contact{
+  display: inline-flex;
+}
+
+.contactfirstline{
+  font-family: $font-family3;
+  font-size: 20px;
+  float: right;
+  color: $brand-color;
+  text-decoration: none;
+}
+
+/* Adding styling to the hr tag */
+/* SIMPLE SELECTOR */
+hr {
+  height: 1px;
+      background-color: $brand-color;
+      border: none;
+}
+
+.right{
+  font-family: $font-family3;
+  font-size: 20px;
+}
+
+.color{
+  text-decoration: none;
+  font-size: 16px;
+
+}
+
+
+/* Adding styling to the arrow in the right footer section which goes to the top of the page */
+.top{
+background-color: $brand-color;
+border: none;
+color: white;
+font-family:$font-family3;
+padding: 15px 32px;
+margin-left: 15%;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+border-radius: 50%;
+}
+
+
+
+/* Adding styling to the contact us section */
+.childDiv {
+width: 50%;
+}
+
+.inline {
+display: inline-flex;
+width:100%
+
+}
+.leftline {
+width: 40% !important;
+}
+
+
+.parentDiv {
+display: inline-flex;
+margin-left: 50%;
+width: 50%;
+}
+
+.split{
+padding: 2%;
+width: 1000px;
+height:80px;
+color: $brand-color;
+font-family: $font-family1;
+}
+
+div a{
+text-decoration: none;
+color: #606060;
+}
+
+.color1{
+color:$brand-color;
+}
+
+.color2{
+color: #606060;
+}
+
+/* heigt of progressbar and background color*/
+    
+progress {
+  background-color: $brand-color;
+  height: 4px;
+  }    
+
+.background {
+background:url('../images/workex4.jpg');
+position: relative;
+}

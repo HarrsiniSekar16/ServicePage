@@ -1,0 +1,113 @@
+@import "variables";
+
+/*Mixin function to change button-width*/
+@mixin button-width-mixin($some-number) {
+    cursor: pointer;
+    color: black;
+    //border: 1px solid white;
+    background: $brand-color;
+    width: $some-number;
+    height: 40px;
+    font-family:'Gill Sans';
+    font-size: 15px;
+  }
+
+
+//Usage of mixin and for loop to create grid layout 
+@mixin grid($column, $row) {
+    display: grid;
+    grid-template-columns: repeat($column, auto);
+    grid-template-rows: repeat($row, auto);
+    @for $i from 1 through $row {
+        @for $j from 1 through $column {
+            .cell-#{$i}-r-#{$j}-c {
+                @include cells($j, $j+1, $i, $i);
+            }
+        }
+    }
+}
+
+// Mixin function to change color upon hover of buttons
+@mixin hover-color-change-mixin($hovercolor){
+    cursor: pointer;
+    color: $hovercolor;
+}
+
+/*Mixin to change card-width*/
+@mixin card-mixin{
+    box-shadow: 0 10px 10px 0 rgb(16, 223, 205);
+    transition: 0.3s;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 300px;
+    margin-left: 8%;
+    margin-right: 0px;
+}
+
+/*Mixin function to change background image*/
+@mixin background-image-mixin($imagepath, $columnIndex) {
+    background-image: url($imagepath);
+    background-repeat: no-repeat;
+    grid-column: $columnIndex/span 1;
+    //margin-left: -15px;
+    grid-row: 1;
+    text-align: center;
+    //height: 400px;
+  }
+
+//mixin for dot class  
+@mixin dot-mixin{
+    width: 50px;
+    font-weight: bolder;
+    background-color: $bgcolor;
+    font-family: $font-family3;
+    font-size: 50px;
+} 
+
+//mixin for form  
+@mixin form-mixin{
+    float: left;
+    border: $border-color1;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+
+/* Including the mixin function as part of class css */
+.MyWorkEx-1 {
+    @include background-image-mixin("../images/workex1.png", 1);
+    background-size: 300px;
+    background-size: contain;
+  }
+
+.MyWorkEx-2 {
+    @include background-image-mixin("../images/workex2.jpg", 2);
+    background-size: contain;
+    margin-right: -3%;
+   
+  }
+
+.MyWorkEx-3 {
+    @include background-image-mixin("../images/workex3.png", 3);
+    background-size: 350px;
+    background-size: contain;
+    
+}
+
+.MyWorkEx-4 {
+    @include background-image-mixin("../images/workex4.jpg", 4);
+    background-size: 325px;
+    background-size: contain;
+    
+  }
+
+//mixin function to  generate rows and columns  
+  @mixin cells($colStart, $colEnd, $rowStart, $rowEnd) {
+    grid-column-start: $colStart;
+    grid-column-end: $colEnd;
+    grid-row-start: $rowStart;
+    grid-row-end: $rowEnd;
+}

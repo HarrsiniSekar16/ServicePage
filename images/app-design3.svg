@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="239" height="303" viewBox="0 0 239 303">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 800 600">
+      <image width="800" height="600" xlink:href="app-design3-image.jpg"/>
+    </pattern>
+  </defs>
+  <rect id="app-design3" width="239" height="303" fill="url(#pattern)"/>
+</svg>

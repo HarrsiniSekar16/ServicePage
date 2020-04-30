@@ -1,0 +1,91 @@
+//All pseudo classes and elements are included in this file.
+
+//using mixin function to give properties to an element upon hover
+h4 > a:hover{
+    @include hover-color-change-mixin($brand-color);
+  }
+
+
+.atag:hover{
+    @include hover-color-change-mixin($brand-color);
+}
+
+
+.button:hover{
+    @include hover-color-change-mixin(white);
+}
+
+
+.LiveDemo:hover{
+    @include hover-color-change-mixin($brand-color);
+}
+
+.button3:hover{
+    @include hover-color-change-mixin(black);
+    background-color: $brand-color;
+}
+
+.button2:hover{
+    @include hover-color-change-mixin(black);
+    background-color: white;
+}
+
+.button4:hover{
+    @include hover-color-change-mixin(black);
+}
+
+.button1:hover{
+    @include hover-color-change-mixin(black);
+    background-color: $brand-color;
+}
+.button5:hover{
+    @include hover-color-change-mixin(black);
+}
+
+
+/* On mouse-over, creating a deeper shadow */
+.card1:hover {                                          //nested loop 
+    button{
+        background-color: white;
+        color: black;
+    }
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: $brand-color ;
+    color:white;
+    }
+
+
+    /* On mouse-over, add a deeper shadow */
+.card2:hover {
+    box-shadow: 0 50px 50px 0 rgba(0,0,0,0.2);
+        
+}
+
+
+/* progress bar background */
+
+progress::-webkit-progress-value {
+    background: $brand-color !important;        //pseudo element
+    }
+    
+   
+
+.contactfirstline > a:hover {
+       text-decoration:none; 
+       @include hover-color-change-mixin($brand-color);
+    }
+
+/* Using attribute selector styling which adds styling to the input type submit */
+input[type=submit]:hover {
+    @include hover-color-change-mixin($brand-color);
+    box-shadow: 0 50px 50px 0 rgba(0,0,0,0.2);
+  }
+
+  /* changing stlying when the arrow section is hovered */
+.uparrow:hover{
+    @include hover-color-change-mixin(white)
+    }
+
+div a:hover{
+    @include hover-color-change-mixin($brand-color)
+}

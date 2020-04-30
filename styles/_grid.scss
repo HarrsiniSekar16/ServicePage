@@ -1,0 +1,172 @@
+@import "variables";
+@import "mixins";
+
+/* This CSS will print because %message-shared is extended.Extend/Inheritance applied */
+
+%grid-shared {
+    grid-gap: 5%;
+    align-content: center;
+}
+
+%cell-align{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.headergrid{
+    display: grid;
+    grid-auto-rows: 50px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,auto);
+    text-align: left;
+    position: sticky ;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+//using mixin function and for loop to generate grid layout for all grids
+
+
+//importing properties of .headergrid class
+.headergrid .cell-1{
+    @include cells(1,2,1,1);        //use of mixin
+    box-sizing: border-box;
+}
+
+.headergrid .cell-2{
+    @include cells(2,3,1,1);
+    box-sizing: border-box;
+   
+}
+
+.Maingrid{
+    display: grid;
+    @extend %grid-shared;               //use of inheritance
+    grid-auto-rows: 650px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.Maingrid .cell-3{
+    @include cells(1,2,1,1);
+}
+
+.Maingrid .cell-4{
+    @include cells(2,3,1,1);
+}
+
+.introgrid{
+    display: grid;
+    @extend %grid-shared;
+    grid-template-rows: 450px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.introgrid .cell-5{
+    @include cells(1,2,1,1);
+}
+
+.introgrid .cell-6{
+    @include cells(2,3,1,1);
+}
+
+.ourProjectsGrid {
+    display:grid;
+    @extend %grid-shared;
+    grid-auto-rows: 400px;
+    grid-auto-columns: 300px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 2%;
+    margin-right: 1%;
+  }
+
+  
+.progressgrid{
+    @include grid(4,1);
+    grid-auto-rows: 300px;
+
+}
+
+.progressgrid{
+    .cell-7{
+        @extend %cell-align;
+        @include cells(1,2,1,1);
+        text-align: center;
+        float: center;
+        
+    }
+    .cell-8{
+        @extend %cell-align;
+        @include cells(2,3,1,1);
+        text-align: center;
+        float: center;
+    }
+    .cell-9{
+        @extend %cell-align;
+        @include cells(3,4,1,1);
+        text-align: center;
+        float: center;
+    }
+    .cell-10{
+        @extend %cell-align;
+        @include cells(4,5,1,1);
+        text-align: center;
+        float: center;
+    }
+}
+
+.testimonialgrid{
+    @include grid(3,1);
+    grid-auto-rows: 200px;
+
+}
+.cell-14{
+    @include cells(1,2,1,1); 
+}
+.cell-15{
+    @include cells(2,3,1,1);
+}
+.cell-16{
+    @include cells(3,4,1,1);
+}
+.cell-11{
+    @include cells(1,2,2,2);
+}
+
+.cell-12{
+    @include cells(2,3,2,2);
+}
+
+.cell-13{
+    @include cells(3,4,2,2);
+}
+.bloggrid{
+    @include grid(3,1);
+    grid-auto-rows: 500px;
+
+}
+
+ .bloggrid{
+    .cell-17{
+        @extend %cell-align;
+        @include cells(1,2,1,1);
+        text-align: center;
+        float: right;
+        
+    }
+    .cell-18{
+        @extend %cell-align;
+        @include cells(2,3,1,1);
+        text-align: center;
+        float: center;
+    }
+    .cell-19{
+        @extend %cell-align;
+        @include cells(3,4,1,1);
+        text-align: center;
+        float: left;
+    }
+}
