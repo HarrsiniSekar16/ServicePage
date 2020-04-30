@@ -1,14 +1,13 @@
-            ASSIGNMENT-4 - Harrsini Sekar
+
 
 # Description
-[homepage.png](https://northeastern.blackboard.com/bbcswebdav/pid-22226601-dt-content-rid-70289624_1/courses/INFO6150.34710.202030/Web%201280%20%E2%80%93%201.png)
 To create a webpage using HTML and SCSS for the attached site.
 The goal of this assigment is to learn about CSS positioning, Grid layout, SCSS features like variables, mixins, inheritance, loops, functions, math operations etc.
 
 ## Installation
-1. Clone the repository `git clone https://github.com/neu-mis-info6150-spring-2020/assignment-4-HarrsiniSekar.git.
-2. Navigate to project directory 
-3. Change the scripts in package.json file to
+
+1. Navigate to project directory 
+2. Change the scripts in package.json file to
     "scripts": {
     "sass": "./node_modules/.bin/node-sass styles/main.scss dist/main.css"
      },
@@ -16,7 +15,7 @@ The goal of this assigment is to learn about CSS positioning, Grid layout, SCSS 
     "node-sass": "^4.13.1",
     "sass": "^1.25.0"
   } 
-4. Run `npm run sass`.
+3. Run `npm run sass`.
 
 Note: npm should be pre-loaded using commands npm i(to install) and npm init(to initiate)
 
