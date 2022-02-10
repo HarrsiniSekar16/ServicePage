@@ -20,7 +20,7 @@
     "node-modules": "^1.0.1"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sass": "^1.25.0"
   }
 }
